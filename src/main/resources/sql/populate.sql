@@ -1,0 +1,1 @@
+INSERT INTO `city` (id, province_id, city_name, description) VALUES (1, 1, '温岭市', 'BYSocket 的家在温岭');

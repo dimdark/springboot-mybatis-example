@@ -1,0 +1,1 @@
+a very simple example demonstrate how to integrate mybatis to springboot

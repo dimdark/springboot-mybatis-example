@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dimdark.dao.CityDao">
+
+	<resultMap id="BaseResultMap" type="com.dimdark.domain.City">
+		<result column="id" property="id" />
+		<result column="province_id" property="provinceId" />
+		<result column="city_name" property="cityName" />
+		<result column="description" property="description" />
+	</resultMap>
+
+	<parameterMap id="City" type="com.dimdark.domain.City" />
+
+	<select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+		SELECT id, province_id, city_name, description FROM city WHERE city_name = #{cityName}
+	</select>
+	
+</mapper>
